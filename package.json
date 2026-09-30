@@ -1,0 +1,42 @@
+{
+  "name": "pitchup-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for the Pitchup.com supplier API: lets Claude, ChatGPT and other MCP clients read a campsite's pitch types, pitches, prices, allocation, extras and bookings, and (when enabled) update allocation, prices and charge types.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build && node test/e2e.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pitchup",
+    "claude",
+    "campsite-bookings"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^7.0.2",
+    "yaml": "^2.9.1"
+  },
+  "type": "module",
+  "bin": {
+    "pitchup-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
